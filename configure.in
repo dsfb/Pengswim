@@ -1,0 +1,30 @@
+dnl Process this file with autoconf to produce a configure script.
+AC_INIT(src/gameloop.c)
+AM_INIT_AUTOMAKE(pengswim,0.3.0)
+AC_PROG_MAKE_SET
+
+dnl Checks for programs
+AC_PROG_CC
+AC_ARG_WITH(font,[  --with-font=FONT        TrueType font you would like to use],AC_DEFINE_UNQUOTED(FONT_FILE,"${withval}"))
+AC_PROG_AWK
+AC_PROG_INSTALL
+
+dnl Checks for libraries.
+AC_CHECK_LIB(SDL_image,IMG_Load,,AC_MSG_ERROR('You must have SDL_image installed'))
+AC_CHECK_LIB(SDL_mixer,Mix_OpenAudio,,AC_MSG_ERROR('You must have SDL_mixer installed'))
+AC_CHECK_LIB(SDL_ttf,TTF_Init,,AC_MSG_ERROR('You must have SDL_ttf installed'))
+
+dnl Checks for header files.
+if test $prefix = NONE; then
+AC_DEFINE_UNQUOTED(DATADIR,"/usr/local/share/$PACKAGE")
+fi
+if test $prefix != NONE; then
+AC_DEFINE_UNQUOTED(DATADIR,"${prefix}/share/$PACKAGE")
+fi
+AC_HEADER_STDC
+
+dnl Checks for typedefs, structures, and compiler characteristics.
+
+dnl Checks for library functions.
+
+AC_OUTPUT(Makefile src/Makefile)

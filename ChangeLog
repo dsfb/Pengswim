@@ -1,0 +1,22 @@
+0.2.0
+-----
+* added ice walls and level maps
+* improved fish graphics and motion--they now turn rotate like the penguin
+* added really basic AI to the fish.  It's the loosest definition of "intelligence"
+* changed the physics to accomodate the new obstacles and prey
+* fixed the install process using autoconf and automake
+* reduced the total particles to ease the processor a bit
+
+0.1.0
+-----
+* Improved the background graphics by adding a mountain (used xmountains to make it)
+* Improved the physics of the penguin, especially while jumping out of the water
+* Added a barrier to all sides of the game display, causing the penguin to about face.
+* Added particle splashes and several minor particle improvements
+* Added a splash noise and a burping sound at the end of each level
+* Fixed the display text by making text boxes centered and a better shade of blue/green
+* Added an icon
+
+0.0.1
+-----
+Everything, actually.

@@ -1,0 +1,15 @@
+To install, type:
+
+./configure --with-font=/usr/share/fonts/default/TrueType/helb____.ttf
+
+The font can be any TrueType font of your choosing, but you MUST specify one if 
+you do not have the font listed above in that location.
+
+If you want to install to a directory besides /usr/local, 
+you'll need to use the '--prefix=/whatever' option.  Check ./configure --help for 
+more options.
+
+Then type:
+
+make
+make install 
